@@ -65,6 +65,26 @@ botonVaciar.addEventListener("click", () => {
     renderCarrito();
 });
 
+// MOSTRAR PRODUCTOS
+zapatos.forEach((zapato) => {
+    let cardZapato = document.createElement("article");
+    cardZapato.classList.add("card");
+
+    cardZapato.innerHTML = `
+        <h3>${zapato.nombre}</h3>
+        <p>${zapato.descripcion}</p>
+        <p>Precio: $${zapato.precio}</p>
+        <button id="btnAgregar${zapato.id}">Agregar al Carrito</button>
+    `;
+
+    seccionProductos.appendChild(cardZapato);
+
+    let botonAgregar = document.getElementById(`btnAgregar${zapato.id}`);
+    botonAgregar.addEventListener("click", () => {
+        agregarAlCarrito(zapato);
+    });
+});
+
 // MOSTRAR CARRITO
 function renderCarrito() {
     seccionCarrito.innerHTML = "<h2>Carrito de Compras</h2>";
@@ -108,22 +128,3 @@ function renderTotal() {
     `;
 }
 
-// MOSTRAR PRODUCTOS
-zapatos.forEach((zapato) => {
-    let cardZapato = document.createElement("article");
-    cardZapato.classList.add("card");
-
-    cardZapato.innerHTML = `
-        <h3>${zapato.nombre}</h3>
-        <p>${zapato.descripcion}</p>
-        <p>Precio: $${zapato.precio}</p>
-        <button id="btnAgregar${zapato.id}">Agregar al Carrito</button>
-    `;
-
-    seccionProductos.appendChild(cardZapato);
-
-    let botonAgregar = document.getElementById(`btnAgregar${zapato.id}`);
-    botonAgregar.addEventListener("click", () => {
-        agregarAlCarrito(zapato);
-    });
-});
