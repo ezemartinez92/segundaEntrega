@@ -3,26 +3,23 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>E-Commerce Zapatos — Mejorado</title>
+  <title>E-Commerce Zapatos</title>
 
   <!-- Bootstrap 5 CSS (CDN) -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-
   <!-- SweetAlert2 -->
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-
   <!-- Iconos (Bootstrap Icons) -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
-
-  <!-- Tu CSS -->
+  <!-- CSS Mio -->
   <link rel="stylesheet" href="estilos.css">
-
-  <!-- Importar la tipografía -->
+  <!-- Tipgrafía -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
-
-  <!-- JS principal -->
+  <!-- Importo el JS -->
   <script defer src="main.js"></script>
 </head>
+
+<!-- Arranca el Body -->
 <body>
   <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
     <div class="container">
@@ -51,7 +48,7 @@
 
   <main class="container my-4">
     <header class="header-principal">
-      <h1>Tienda de Zapatos</h1>
+      <h1>Tienda de Zapatos </h1>
       <p>Explora nuestra colección de zapatos de alta calidad. ¡Encontrá el par perfecto para vos!</p>
     </header>
 
@@ -59,7 +56,7 @@
       <div class="col-lg-8">
         <h2 class="h5 mb-3">Productos</h2>
         <div id="seccionProductos" class="row g-3">
-          <!-- cards se inyectan desde JS -->
+          <!-- Acá vienen mis cards que creo en el JS -->
         </div>
       </div>
 
@@ -72,11 +69,11 @@
             </h5>
 
             <div id="listaCarrito" class="mb-3">
-              <!-- items del carrito -->
+              <!-- Acá vienen mis items del carrito que es mi array de objetos del JSON -->
             </div>
 
             <div id="totalCarrito" class="mb-3">
-              <!-- total -->
+              <!-- Cálculo para el total de mi carrito -->
             </div>
 
             <div class="d-flex gap-2">
@@ -90,9 +87,10 @@
   </main>
 
   <footer class="text-center py-3 text-muted small">
-    &copy; 2025 E-Commerce Zapatos. Todos los derechos reservados.
+    &copy; 2025 E-Commerce Zapatos. Realizado por Ezequiel Martínez Morelli. Todos los derechos reservados.
   </footer>
 
+  <!-- Formularios para la simulación de pago-->
   <!-- Modal Checkout (Formulario de simulación de pago) -->
   <div class="modal fade" id="checkoutModal" tabindex="-1" aria-labelledby="checkoutModalLabel" aria-hidden="true">
     <div class="modal-dialog">
